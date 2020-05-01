@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAndi Price</title>
+    <link rel="icon" href="../assets/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/master.css" />
+    <link rel="stylesheet" href="../assets/css/farmer.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- <script src="../assets/js/farmer.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><i class="fas fa-tractor"></i> Kishan ka HAL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#actrule" style="color: white;">Act &amp; rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" style="color: white;">About Us</a>
+                    </li>
+                    <!-- google -->
+                    <li>
+                        <p style="color: white;text-shadow: 3px 3px 5px #000000;padding: 2px;margin-right: 15px;">
+                            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;किसान
+                का हल &nbsp;&nbsp; राष्‍ट्र का कल</b></p>
+                    </li>
+                    <li>
+                        <div id="google_translate_element"></div>
+
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                            }
+                        </script>
+
+                        <script type="text/javascript"
+                            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </li>
+                    <!-- google -->
+                </ul>
+
+                <div class="my-2 my-lg-0">
+
+                    <button type="button" class="btn btn-info btn-lg grow" id="myBtn">
+                        <span class="far fa-user grow"></span> Login/Signup
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header" style="padding:35px 50px;">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4><span class="fa fa-lock"></span> Login</h4>
+                            </div>
+                            <div class="modal-body" style="padding:40px 50px;">
+                                <form role="form" method="POST" action="LoginHandler/login.php">
+                                    <h3>Choose yourself:</h3>
+                                    <div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" id="1" name="optradio"
+                                                    value="1">Farmer
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" id="2" name="optradio"
+                                                    value="2">Landlord
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" id="3" name="optradio"
+                                                    value="3">Retailer\Local
+                                                Vendor
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" id="4" name="optradio"
+                                                    value="4">Mandi
+                                            </label>
+                                        </div>
+
+                                        <!--  <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="5" name="optradio" value="5">Agri Expert
+                          </label>
+                        </div> -->
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="usrname"><span class="far fa-user"></span> Username</label>
+                                        <input type="text" class="form-control" id="username" name="username"
+                                            placeholder="Enter username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="psw"><span class="far fa-eye"></span> Password</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            placeholder="Enter password" required="required">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="" checked>Remember me</label>
+                                    </div>
+                                    <button type="submit" placeholder="Login" name="login"
+                                        class="btn btn-success btn-block"><span class="fas fa-power-off"></span>
+                                        Login</button>
+
+                                    <p>Forgot <a href="#">Password?</a></p>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <p>Not a member? <a href="RegisterHandler/register.html">Sign Up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid text-center" id="mandi">
+        <h3>Mandi Prices</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>District</th>
+                    <th>Commmodit</th>
+                    <th>Max price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Odisha</td>
+                    <td>Bargarh</td>
+                    <td>Brinjal</td>
+                    <td>1600</td>
+                </tr>
+                <tr>
+                    <td>Odisha</td>
+                    <td>Bargarh</td>
+                    <td>Cauliflower</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Odisha</td>
+                    <td>Bargarh</td>
+                    <td>Onion</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Odisha</td>
+                    <td>Bargarh</td>
+                    <td>Potato</td>
+                    <td>1500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
